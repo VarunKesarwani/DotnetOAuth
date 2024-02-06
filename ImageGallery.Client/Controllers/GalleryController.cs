@@ -28,7 +28,7 @@ namespace ImageGallery.Client.Controllers
             var idToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.IdToken);
 
             var userClaimsStringBuilder = new StringBuilder();
-
+            // User object is exposed by ControllerBase class
             foreach (var claim in User.Claims)
             {
                 userClaimsStringBuilder.AppendLine($"Claim Type:{claim.Type} - Claim value: {claim.Value}");
@@ -37,6 +37,7 @@ namespace ImageGallery.Client.Controllers
             _logger.LogInformation($"Identity token & user claims: \n{idToken} \n {userClaimsStringBuilder}");
         }
 
+        // This action is triggered when App is started. This is calling backend API.
         public async Task<IActionResult> Index()
         {
             await LogIdentityInformation();

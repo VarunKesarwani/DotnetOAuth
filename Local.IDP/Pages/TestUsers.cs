@@ -10,6 +10,7 @@ using Duende.IdentityServer.Test;
 
 namespace Everi.IDP;
 
+// Varun: This class is added to deal with In-Memory User
 public class TestUsers
 {
     public static List<TestUser> Users
@@ -31,8 +32,12 @@ public class TestUsers
                     SubjectId = "3C0BE9B6-C905-47D8-BC0F-83A91A7F338A",
                     Username = "alice",
                     Password = "alice",
+
+                    // Varun:Information about user
+                    // Varun: Claims are related to scope
                     Claims =new List<Claim>()
                     {
+                        new Claim("role","FreeUser"),
                         new Claim(JwtClaimTypes.Name, "Alice Smith"),
                         new Claim(JwtClaimTypes.GivenName, "Alice"),
                         new Claim(JwtClaimTypes.FamilyName, "Smith"),
@@ -49,6 +54,7 @@ public class TestUsers
                     Password = "bob",
                     Claims = new List<Claim>()
                     {
+                        new Claim("role","PaidUser"),
                         new Claim(JwtClaimTypes.Name, "Bob Smith"),
                         new Claim(JwtClaimTypes.GivenName, "Bob"),
                         new Claim(JwtClaimTypes.FamilyName, "Smith"),

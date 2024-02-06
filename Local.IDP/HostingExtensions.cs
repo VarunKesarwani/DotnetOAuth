@@ -6,7 +6,8 @@ internal static class HostingExtensions
 {
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
-        // uncomment if you want to add a UI
+        // Varun:This will add razor page UI to IDP
+        
         builder.Services.AddRazorPages();
 
         builder.Services.AddIdentityServer(options =>
@@ -17,7 +18,7 @@ internal static class HostingExtensions
             .AddInMemoryIdentityResources(Config.IdentityResources)
             .AddInMemoryApiScopes(Config.ApiScopes)
             .AddInMemoryClients(Config.Clients)
-            .AddTestUsers(TestUsers.Users);
+            .AddTestUsers(TestUsers.Users); // Varun: This is user mapping to IDP
 
         return builder.Build();
     }
