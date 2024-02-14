@@ -12,15 +12,29 @@ public static class Config
         {
             new IdentityResources.OpenId(), // Maps to user's identifier, This is required. By this subjectId of TestUsers can be requested
             new IdentityResources.Profile(), // Maps to user's name, family name, DOB, etc
-            new IdentityResource("roles","Your role(s)", new []{"role"})
+            new IdentityResource("roles","Your role(s)", new []{"role"}), // Adding Custom scope
+            new IdentityResource("country","Country of living", new List<string> {"country"}) // Adding additional scope for ABAC
         };
 
-    // Varun:This Maps to API, which APIs client application (Not Users) can access
-    // Varun: This deals with API scope and claims only
+    // API Resource define physical or logical API collection like productapi,orderapi, customerapi
+    public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
+    {
+        new ApiResource("imagegalleryapi", "Image Gallery API", new[] {"role","country"})
+        {
+            Scopes = { "imagegalleryapi.fullaccess", "imagegalleryapi.read", "imagegalleryapi.write" }
+        }
+    };
+
+    // Varun: This Maps to API, which APIs client application (Not Users) can access
+    // Varun: This deals with API scope and claims only. In simple words defines api access control like imagegalleryapi.read or imagegalleryapi.write
+    // Varun: This scope has nothing to do with user
+    // Varun: We will check for this at API level before we allow access to that function.
     public static IEnumerable<ApiScope> ApiScopes =>
         new ApiScope[]
         {
-
+            new ApiScope("imagegalleryapi.fullaccess"),
+            new ApiScope("imagegalleryapi.read"),
+            new ApiScope("imagegalleryapi.write")
         };
 
     // Varun:Those Client application are defined or configured here
@@ -49,7 +63,11 @@ public static class Config
                     // This defines scopes which this client can request for
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
-                    "roles"
+                    "roles",
+                    //"imagegalleryapi.fullaccess", // Adding api resource to client scope.
+                    "imagegalleryapi.read",
+                    "imagegalleryapi.write",
+                    "country"
                 },
                 ClientSecrets =
                 {

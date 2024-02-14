@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,10 +26,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            @if (User.IsInRole("PaidUser"))
+                            @* RBAC based *@
+                            @*  @if (User.IsInRole("PaidUser"))
+                            {
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="AddImage">Add an Image</a>
+
+                            } *@
+                            @* Adding ABAC Policy *@
+                            @if ((await AuthorizationService.AuthorizeAsync(User, "UserCanAddImage")).Succeeded)
                             {
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Gallery" asp-action="AddImage">Add an Image</a>
-
                             }
                         </li>
                         <li class="nav-item">

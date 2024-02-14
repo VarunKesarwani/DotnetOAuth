@@ -20,5 +20,10 @@ namespace ImageGallery.Client.Controllers
             // This Endpoint allows IDP to clear its own cookie.
             await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
         }
+
+        public async Task<ViewResult> AccessDenied()
+        {
+            return View();
+        }
     }
 }

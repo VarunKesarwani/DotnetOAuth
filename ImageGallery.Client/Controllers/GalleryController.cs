@@ -27,6 +27,8 @@ namespace ImageGallery.Client.Controllers
         {
             var idToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.IdToken);
 
+            var access_token = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);
+
             var userClaimsStringBuilder = new StringBuilder();
             // User object is exposed by ControllerBase class
             foreach (var claim in User.Claims)
@@ -35,6 +37,7 @@ namespace ImageGallery.Client.Controllers
             }
 
             _logger.LogInformation($"Identity token & user claims: \n{idToken} \n {userClaimsStringBuilder}");
+            _logger.LogInformation($"Access token : \n{access_token} ");
         }
 
         // This action is triggered when App is started. This is calling backend API.
@@ -143,6 +146,9 @@ namespace ImageGallery.Client.Controllers
             return RedirectToAction("Index");
         }
 
+        // We can use comma to add more roles
+        //[Authorize(Roles = "PaidUser")]
+        [Authorize(Policy = "UserCanAddImage")]
         public IActionResult AddImage()
         {
             return View();
@@ -150,6 +156,8 @@ namespace ImageGallery.Client.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //[Authorize(Roles = "PaidUser")]
+        [Authorize(Policy = "UserCanAddImage")]
         public async Task<IActionResult> AddImage(AddImageViewModel addImageViewModel)
         {
             if (!ModelState.IsValid)

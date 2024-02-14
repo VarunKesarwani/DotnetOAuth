@@ -1,0 +1,13 @@
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\bin\Debug\net6.0\ImageGallery.Authentication.deps.json
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\bin\Debug\net6.0\ImageGallery.Authentication.dll
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\bin\Debug\net6.0\ImageGallery.Authentication.pdb
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.csproj.AssemblyReference.cache
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.AssemblyInfoInputs.cache
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.AssemblyInfo.cs
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.csproj.CoreCompileInputs.cache
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.sourcelink.json
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.dll
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\refint\ImageGallery.Authentication.dll
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ImageGallery.Authentication.pdb
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Authentication\obj\Debug\net6.0\ref\ImageGallery.Authentication.dll

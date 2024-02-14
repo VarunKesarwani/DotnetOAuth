@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ImageGallery.API.Controllers
 {
-    //[Authorize]
     [Route("api/images")]
     [ApiController]
+    [Authorize]
     public class ImagesController : ControllerBase
     {
         private readonly IGalleryRepository _galleryRepository;
@@ -20,19 +20,21 @@ namespace ImageGallery.API.Controllers
             IWebHostEnvironment hostingEnvironment,
             IMapper mapper)
         {
-            _galleryRepository = galleryRepository ?? 
+            _galleryRepository = galleryRepository ??
                 throw new ArgumentNullException(nameof(galleryRepository));
-            _hostingEnvironment = hostingEnvironment ?? 
+            _hostingEnvironment = hostingEnvironment ??
                 throw new ArgumentNullException(nameof(hostingEnvironment));
-            _mapper = mapper ?? 
+            _mapper = mapper ??
                 throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet()]
         public async Task<ActionResult<IEnumerable<Image>>> GetImages()
         {
+            var ownerid = User.Claims.FirstOrDefault(c => c.Type == "sub")?.Value /*?? "8437D07C-5D2E-40CA-9E85-F3C0ADB41DAB"*/;
+            Console.WriteLine($"Owner Name: {ownerid}");
             // get from repo
-            var imagesFromRepo = await _galleryRepository.GetImagesAsync();
+            var imagesFromRepo = await _galleryRepository.GetImagesAsync(ownerid);
 
             // map to model
             var imagesToReturn = _mapper.Map<IEnumerable<Image>>(imagesFromRepo);
@@ -43,7 +45,7 @@ namespace ImageGallery.API.Controllers
 
         [HttpGet("{id}", Name = "GetImage")]
         public async Task<ActionResult<Image>> GetImage(Guid id)
-        {          
+        {
             var imageFromRepo = await _galleryRepository.GetImageAsync(id);
 
             if (imageFromRepo == null)
@@ -57,6 +59,9 @@ namespace ImageGallery.API.Controllers
         }
 
         [HttpPost()]
+        //[Authorize(Roles = "PaidUser")]
+        [Authorize(Policy = "UserCanAddImage")]
+        [Authorize(Policy = "CanAddImage")]
         public async Task<ActionResult<Image>> CreateImage([FromBody] ImageForCreation imageForCreation)
         {
             // Automapper maps only the Title in our configuration
@@ -71,7 +76,7 @@ namespace ImageGallery.API.Controllers
 
             // create the filename
             string fileName = Guid.NewGuid().ToString() + ".jpg";
-            
+
             // the full file path
             var filePath = Path.Combine($"{webRootPath}/images/{fileName}");
 
@@ -83,7 +88,10 @@ namespace ImageGallery.API.Controllers
 
             // ownerId should be set - can't save image in starter solution, will
             // be fixed during the course
-            //imageEntity.OwnerId = ...;
+
+            // We should always get ownerId from access token as this value is signed and cannot be tempered with
+            string ownerid = User.Claims.FirstOrDefault(i => i.Type == "sub").Value;
+            imageEntity.OwnerId = ownerid;
 
             // add and save.  
             _galleryRepository.AddImage(imageEntity);
@@ -99,7 +107,7 @@ namespace ImageGallery.API.Controllers
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteImage(Guid id)
-        {            
+        {
             var imageFromRepo = await _galleryRepository.GetImageAsync(id);
 
             if (imageFromRepo == null)
@@ -115,7 +123,7 @@ namespace ImageGallery.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateImage(Guid id, 
+        public async Task<IActionResult> UpdateImage(Guid id,
             [FromBody] ImageForUpdate imageForUpdate)
         {
             var imageFromRepo = await _galleryRepository.GetImageAsync(id);

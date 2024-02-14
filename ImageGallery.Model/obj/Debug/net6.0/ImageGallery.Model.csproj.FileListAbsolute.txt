@@ -20,3 +20,4 @@ C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGall
 C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Model\obj\Debug\net6.0\refint\ImageGallery.Model.dll
 C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Model\obj\Debug\net6.0\ImageGallery.Model.pdb
 C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Model\obj\Debug\net6.0\ref\ImageGallery.Model.dll
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.Model\obj\Debug\net6.0\ImageGallery.Model.sourcelink.json

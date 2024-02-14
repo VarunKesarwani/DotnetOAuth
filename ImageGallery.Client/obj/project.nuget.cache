@@ -1,17 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "svUj2r5heo58QZ6LGTukqv8fvpbnoxpRLYibRzev+dPnsUaBOmflSVWAhoZigMBveLyJTTPs0t1LYA4Knr3qTQ==",
+  "dgSpecHash": "Q+ialBiMP2P/0Nr+rnGuAgjT7njYL6yM8oc1IdXjWGlB4Gpv78mdVcfKtw/k4c/bk2Wgltx60UvWYC0ogHAweQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\varun.gupta\\Documents\\Varun\\Study\\OpenIdConnect\\Starter files\\ImageGallery.Client\\ImageGallery.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\identitymodel\\6.0.0\\identitymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\identitymodel.aspnetcore\\4.3.0\\identitymodel.aspnetcore.4.3.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\6.0.25\\microsoft.aspnetcore.authentication.openidconnect.6.0.25.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.1\\microsoft.aspnetcore.authorization.8.0.1.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.1\\microsoft.aspnetcore.metadata.8.0.1.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.extensions.options\\8.0.1\\microsoft.extensions.options.8.0.1.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.10.0\\microsoft.identitymodel.jsonwebtokens.6.10.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.identitymodel.logging\\6.10.0\\microsoft.identitymodel.logging.6.10.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.10.0\\system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []

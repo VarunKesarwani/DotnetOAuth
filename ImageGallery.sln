@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageGallery.Model", "Image
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Local.IDP", "Local.IDP\Local.IDP.csproj", "{8EF199C0-77A1-4254-B3AC-9C30C548BAF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageGallery.Authentication", "ImageGallery.Authentication\ImageGallery.Authentication.csproj", "{8918855D-E566-4B7F-9BF1-E311C6D5A779}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8EF199C0-77A1-4254-B3AC-9C30C548BAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EF199C0-77A1-4254-B3AC-9C30C548BAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EF199C0-77A1-4254-B3AC-9C30C548BAF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8918855D-E566-4B7F-9BF1-E311C6D5A779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8918855D-E566-4B7F-9BF1-E311C6D5A779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8918855D-E566-4B7F-9BF1-E311C6D5A779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8918855D-E566-4B7F-9BF1-E311C6D5A779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
