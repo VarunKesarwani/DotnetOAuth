@@ -21,7 +21,8 @@ public static class Config
     {
         new ApiResource("imagegalleryapi", "Image Gallery API", new[] {"role","country"})
         {
-            Scopes = { "imagegalleryapi.fullaccess", "imagegalleryapi.read", "imagegalleryapi.write" }
+            Scopes = { "imagegalleryapi.fullaccess", "imagegalleryapi.read", "imagegalleryapi.write" },
+            ApiSecrets = {new Secret("apiscecret".Sha256()) }
         }
     };
 
@@ -46,7 +47,16 @@ public static class Config
             {
                 ClientName = "Image Gallery",
                 ClientId = "imagegalleryclient",
+                AccessTokenType = AccessTokenType.Reference, //AccessTokenType.Jwt for self contained token
                 AllowedGrantTypes = GrantTypes.Code, // this is code flow
+                AllowOfflineAccess = true,
+                UpdateAccessTokenClaimsOnRefresh = true, // Lets say claims in access token for user has changed for exmaple country,
+                                                         // in that case this value will not be refreshed untill access token is refreshed.
+                                                         // In order to avoid this and refresh claim value this property is used.
+                IdentityTokenLifetime = 300,
+                AuthorizationCodeLifetime = 300,
+                AccessTokenLifetime = 120, //default is 3600s or 1H
+                SlidingRefreshTokenLifetime = 1200000,
                 RedirectUris =
                 {
                     "https://localhost:7184/signin-oidc" 

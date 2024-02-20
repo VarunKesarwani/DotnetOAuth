@@ -29,6 +29,8 @@ namespace ImageGallery.Client.Controllers
 
             var access_token = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);
 
+            var refresh_token = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.RefreshToken);
+
             var userClaimsStringBuilder = new StringBuilder();
             // User object is exposed by ControllerBase class
             foreach (var claim in User.Claims)
@@ -38,6 +40,7 @@ namespace ImageGallery.Client.Controllers
 
             _logger.LogInformation($"Identity token & user claims: \n{idToken} \n {userClaimsStringBuilder}");
             _logger.LogInformation($"Access token : \n{access_token} ");
+            _logger.LogInformation($"Refresh token : \n{refresh_token} ");
         }
 
         // This action is triggered when App is started. This is calling backend API.

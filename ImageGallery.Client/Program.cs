@@ -58,6 +58,7 @@ builder.Services.AddAuthentication(o =>
         o.Scope.Add("imagegalleryapi.read");
         o.Scope.Add("imagegalleryapi.write");
         o.Scope.Add("country");
+        o.Scope.Add("offline_access"); // This alone with take care of sending refresh token from middleware.
         //o.ClaimActions.MapUniqueJsonKey("role","role"); // This is used when user can have only one role. in case user has many roles we use mapping as below.
         o.ClaimActions.MapJsonKey("role", "role");
         o.ClaimActions.MapUniqueJsonKey("country", "country");
