@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "oCqwJQKooNwCvf5eRrWzfksxPtOe7q6nbrFYM1ZosPA6vAWX7ENT+bBgtUXg18cYL10cfIiCwevcQuvEJCc+yQ==",
+  "dgSpecHash": "bA5OblfxcB6BU7I3BX8V8TUEayxBROKpDWcmA4BMNPvnTqroTT19BUYSj8/DbU5DdtObKpc6YRXzkiHHtKpFSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\varun.gupta\\Documents\\Varun\\Study\\OpenIdConnect\\Starter files\\ImageGallery.API\\ImageGallery.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\varun.gupta\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\identitymodel\\6.0.0\\identitymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\varun.gupta\\.nuget\\packages\\identitymodel.aspnetcore.oauth2introspection\\6.2.0\\identitymodel.aspnetcore.oauth2introspection.6.2.0.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.26\\microsoft.aspnetcore.authentication.jwtbearer.6.0.26.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.1\\microsoft.aspnetcore.authorization.8.0.1.nupkg.sha512",
     "C:\\Users\\varun.gupta\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.1\\microsoft.aspnetcore.metadata.8.0.1.nupkg.sha512",

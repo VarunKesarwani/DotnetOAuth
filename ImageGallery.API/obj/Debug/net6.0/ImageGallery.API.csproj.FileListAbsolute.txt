@@ -133,3 +133,5 @@ C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGall
 C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.API\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.API\bin\Debug\net6.0\ImageGallery.Authentication.dll
 C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.API\bin\Debug\net6.0\ImageGallery.Authentication.pdb
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.API\bin\Debug\net6.0\IdentityModel.dll
+C:\Users\varun.gupta\Documents\Varun\Study\OpenIdConnect\Starter files\ImageGallery.API\bin\Debug\net6.0\IdentityModel.AspNetCore.OAuth2Introspection.dll

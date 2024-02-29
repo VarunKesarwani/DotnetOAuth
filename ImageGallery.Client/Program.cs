@@ -40,14 +40,20 @@ builder.Services.AddAuthentication(o =>
     o =>
     {
         o.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        o.Authority = "https://localhost:6001";
+
+        //o.Authority = "https://localhost:6001";
+        o.Authority = "https://localhost:44300"; //For windows authentication
         o.ClientId = "imagegalleryclient";
         o.ClientSecret = "secret";
         o.ResponseType = "code";
         //o.Scope.Add("openid"); // These scope are called by default, thus we have commented it out
         //o.Scope.Add("profile");
+
+        //
         //o.CallbackPath = new PathString("signin-oidc"); // This is again default value
         //o.SignedOutCallbackPath = new PathString("signout-callback-oidc"); // IDP redirects to this url post sign out This is again an default value. And this needs to be registered at IDP level
+        //
+
         o.SaveTokens = true; // This will save cookie in application property and will be visible to User Object
         o.GetClaimsFromUserInfoEndpoint = true; // This will call UserInfo endpoint to get user identity claim information
         o.ClaimActions.Remove("aud");

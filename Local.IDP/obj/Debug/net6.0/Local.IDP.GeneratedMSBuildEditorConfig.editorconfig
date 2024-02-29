@@ -118,6 +118,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU3VtbWFyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/varun.gupta/Documents/Varun/Study/OpenIdConnect/Starter files/Local.IDP/Pages/Windows/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2luZG93c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/varun.gupta/Documents/Varun/Study/OpenIdConnect/Starter files/Local.IDP/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

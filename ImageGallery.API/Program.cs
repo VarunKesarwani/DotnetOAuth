@@ -30,7 +30,8 @@ JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 // Add services to the container.
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddOAuth2Introspection(o => {
-        o.Authority = "https://localhost:6001";
+        //o.Authority = "https://localhost:6001";
+        o.Authority = "https://localhost:44300";
         o.ClientId = "imagegalleryapi";
         o.ClientSecret = "apiscecret";
         o.NameClaimType = "given_name";

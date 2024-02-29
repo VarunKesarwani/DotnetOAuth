@@ -23,7 +23,9 @@ public static class Config
         {
             Scopes = { "imagegalleryapi.fullaccess", "imagegalleryapi.read", "imagegalleryapi.write" },
             ApiSecrets = {new Secret("apiscecret".Sha256()) }
-        }
+        },
+        new ApiResource("producapi"),
+        new ApiResource("orderapi")
     };
 
     // Varun: This Maps to API, which APIs client application (Not Users) can access
@@ -59,10 +61,10 @@ public static class Config
                 SlidingRefreshTokenLifetime = 1200000,
                 RedirectUris =
                 {
-                    "https://localhost:7184/signin-oidc" 
                     // This is client URI where token will be redirected to,
                     // meaning uri on which this client is allowed to receive token on.
                     // signin-oidc is default uri used by middleware.
+                    "https://localhost:7184/signin-oidc"
                 },
                 PostLogoutRedirectUris =
                 {
@@ -84,6 +86,7 @@ public static class Config
                     new Secret("secret".Sha256())
                 },
                 RequireConsent = true // This will ask user for consent.
-            }
+            },
+            new Client()
         };
 }
